@@ -30,17 +30,26 @@ const App = () => {
       <main>
          <Search handleClick={handleSearch} />
 
-         <div>
-            {isLoading && <p>Loading...</p>}
-            {data && (
-               <div>
-                  <img src={data.avatar_url} alt="" />
-                  <p>{data.name}</p>
-                  <p>{data.location}</p>
-                  <p>{data.bio ?? "This profile has no bio"}</p>
+         {isLoading ? (
+            <p>Loading...</p>
+         ) : (
+            data && (
+               <div className="flex flex-row">
+                  <div className="w-[120px] h-[120px] overflow-hidden rounded-full">
+                     <img
+                        className="w-full h-full"
+                        src={data.avatar_url}
+                        alt=""
+                     />
+                  </div>
+                  <div>
+                     <p>{data.name}</p>
+                     <p>{data.location}</p>
+                     <p>{data.bio ?? "This profile has no bio"}</p>
+                  </div>
                </div>
-            )}
-         </div>
+            )
+         )}
       </main>
    );
 };
