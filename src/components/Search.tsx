@@ -8,13 +8,18 @@ const Search = ({ handleClick }: SearchProps) => {
    const ref = useRef<HTMLInputElement>(null);
 
    return (
-      <div className="flex bg-white">
+      <div className="search-bar">
          <div>
             <img src="images/search-icon.png" alt="Search Icon" />
          </div>
-         <input ref={ref} type="text" placeholder="Search Github username..." />
+         <input
+            className="flex-1"
+            ref={ref}
+            type="text"
+            placeholder="Search Github username..."
+         />
          <button
-            className="bg-blue-500 text-white px-2 py-1 rounded self-end"
+            className="bg-accent text-white py-[0.5rem] px-[1rem] rounded-[0.5rem] justify-self-end hover:bg-[#60ABFF]"
             onClick={() => handleClick(ref.current!.value)}
          >
             Search

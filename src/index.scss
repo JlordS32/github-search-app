@@ -18,3 +18,16 @@
       }
    }
 }
+
+@layer components {
+   .search-bar {
+      @apply flex items-center gap-4 p-[32px];
+      @apply w-full h-[70px];
+      @apply bg-white rounded-[15px] mb-[1.5rem];
+      @apply shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)];
+   }
+
+   .card {
+      @apply bg-white;
+   }
+}
