@@ -27,7 +27,7 @@ const App = () => {
    }, [data]);
 
    return (
-      <main>
+      <main className="w-[730px] mx-auto my-auto">
          <Search handleClick={handleSearch} />
 
          {isLoading ? (
