@@ -6,7 +6,7 @@
 
 @layer base {
    body {
-      @apply bg-background-light text-diplayText-light text-[15px];
+      @apply bg-background-light dark:bg-background-dark text-diplayText-light text-[15px];
    }
 
    input {
@@ -19,11 +19,11 @@
    }
 
    h1 {
-      @apply text-xl font-bold text-diplayText-light;
+      @apply text-xl font-bold text-diplayText-light dark:text-diplayText-dark;
    }
 
    h2 {
-      @apply text-lg font-bold;
+      @apply text-lg font-bold text-diplayText-light dark:text-diplayText-dark;
    }
 
    h3 {
@@ -31,12 +31,12 @@
    }
 
    h4 {
-      @apply text-sm text-light;
+      @apply text-sm text-light dark:text-dark;
    }
 
    p,
    a {
-      @apply text-light;
+      @apply text-light dark:text-dark;
    }
 }
 
@@ -44,16 +44,23 @@
    .search-bar {
       @apply flex items-center gap-4 p-[32px];
       @apply w-full h-[70px];
-      @apply bg-white rounded-[15px] mb-[1.5rem];
-      @apply shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)];
+      @apply bg-primary-light dark:bg-primary-dark text-light dark:text-dark rounded-[15px] mb-[1.5rem];
+      @apply shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)] dark:shadow-none;
    }
 
    .card {
-      @apply bg-white shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)] rounded-[15px] p-[48px] flex;
+      /* Layout */
+      @apply grid grid-cols-4 grid-rows-4 h-[444px];
+      /* Color */
+      @apply bg-primary-light dark:bg-primary-dark text-light dark:text-dark  shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)] rounded-[15px] p-[48px] dark:shadow-none gap-y-[1rem];
    }
 
    .info {
-      @apply flex-center-y justify-start gap-[0.9rem];
+      @apply flex-center-y justify-start dark:text-white gap-[0.9rem];
+
+      > svg {
+         @apply w-[13.753px];
+      }
    }
 }
 
@@ -68,5 +75,9 @@
 
    .half-opacity {
       @apply opacity-[0.5];
+   }
+
+   .clamped-width {
+      width: clamp(38.2rem, 100%, 48.65rem);
    }
 }

@@ -42,6 +42,11 @@ export default {
             md: ["16px", { lineHeight: "24px" }],
             sm: ["13px", { lineHeight: "20px" }],
          },
+         screens: {
+            sm: "375px",
+            md: "768px",
+            lg: "1024px",
+         }
       },
    },
    plugins: [],

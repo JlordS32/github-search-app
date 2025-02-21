@@ -40,8 +40,11 @@ const App = () => {
    }, [data]);
 
    return (
-      <main className="w-[730px] h-screen mx-auto">
-         <div className="w-full mt-[10rem]">
+      <main
+         className="clamped-width
+] h-screen mx-auto max-lg:px-[90px] pt-[144px]"
+      >
+         <div className="w-full">
             <ToastContainer />
             <Header />
             <Search handleClick={handleSearch} />
