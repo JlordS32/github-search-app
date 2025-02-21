@@ -6,7 +6,7 @@
 
 @layer base {
    body {
-      @apply bg-background-light;
+      @apply bg-background-light text-diplayText-light text-[15px];
    }
 
    input {
@@ -16,6 +16,27 @@
       &:focus {
          @apply outline-none border-none;
       }
+   }
+
+   h1 {
+      @apply text-xl font-bold text-diplayText-light;
+   }
+
+   h2 {
+      @apply text-lg font-bold;
+   }
+
+   h3 {
+      @apply text-md font-normal;
+   }
+
+   h4 {
+      @apply text-sm text-light;
+   }
+
+   p,
+   a {
+      @apply text-light;
    }
 }
 
@@ -28,6 +49,24 @@
    }
 
    .card {
-      @apply bg-white;
+      @apply bg-white shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)] rounded-[15px] p-[48px] flex;
+   }
+
+   .info {
+      @apply flex-center-y justify-start gap-[0.9rem];
+   }
+}
+
+@layer utilities {
+   .flex-center {
+      @apply flex items-center justify-center;
+   }
+
+   .flex-center-y {
+      @apply flex items-center;
+   }
+
+   .half-opacity {
+      @apply opacity-[0.5];
    }
 }

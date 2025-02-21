@@ -5,6 +5,8 @@ export default {
    theme: {
       extend: {
          colors: {
+            light: "#4B6A9B",
+            dark: "#FFFFFF",
             accent: "#0079FF",
             primary: {
                light: "#FEFEFE",
@@ -17,10 +19,6 @@ export default {
             card: {
                light: "#FEFEFE",
                dark: "#141D2F",
-            },
-            text: {
-               light: "#4B6A9B",
-               dark: "#FFFFFF",
             },
             diplayText: {
                light: "#2B3442",
@@ -37,6 +35,12 @@ export default {
          },
          fontFamily: {
             sans: ["Space Mono", "serif"],
+         },
+         fontSize: {
+            xl: ["26px", { lineHeight: "38px" }],
+            lg: ["22px", { lineHeight: "33px" }],
+            md: ["16px", { lineHeight: "24px" }],
+            sm: ["13px", { lineHeight: "20px" }],
          },
       },
    },
