@@ -9,17 +9,17 @@ const Search = ({ handleClick }: SearchProps) => {
 
    return (
       <div className="search-bar">
-         <div>
+         <div className="max-sm:w-[20px]">
             <img src="images/search-icon.png" alt="Search Icon" />
          </div>
          <input
             className="flex-1"
             ref={ref}
             type="text"
-            placeholder="Search Github username..."
+            placeholder="Search..."
          />
          <button
-            className="bg-accent text-white py-[0.5rem] px-[1rem] rounded-[0.5rem] justify-self-end hover:bg-[#60ABFF]"
+            className="bg-accent text-white py-[0.5rem] px-[1rem] rounded-[0.5rem] justify-self-end hover:bg-[#60ABFF] max-sm:py-[0.8rem]"
             onClick={() => handleClick(ref.current!.value)}
          >
             Search

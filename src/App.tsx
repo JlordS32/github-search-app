@@ -42,7 +42,7 @@ const App = () => {
    return (
       <main
          className="clamped-width
-] h-screen mx-auto max-lg:px-[90px] pt-[144px]"
+] h-screen mx-auto max-lg:px-[1.6rem] pt-[9.3rem] max-sm:pt-[2rem]"
       >
          <div className="w-full">
             <ToastContainer />

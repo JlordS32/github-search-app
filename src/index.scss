@@ -6,7 +6,7 @@
 
 @layer base {
    body {
-      @apply bg-background-light dark:bg-background-dark text-diplayText-light text-[15px];
+      @apply bg-background-light dark:bg-background-dark text-diplayText-light text-[15px] max-sm:text-[13px];
    }
 
    input {
@@ -19,11 +19,11 @@
    }
 
    h1 {
-      @apply text-xl font-bold text-diplayText-light dark:text-diplayText-dark;
+      @apply text-xl max-sm:text-[16px] max-sm:leading-normal font-bold text-diplayText-light dark:text-diplayText-dark;
    }
 
    h2 {
-      @apply text-lg font-bold text-diplayText-light dark:text-diplayText-dark;
+      @apply text-lg max-sm:text-[16px] font-bold text-diplayText-light dark:text-diplayText-dark;
    }
 
    h3 {
@@ -31,7 +31,7 @@
    }
 
    h4 {
-      @apply text-sm text-light dark:text-dark;
+      @apply text-sm max-sm:text-[11px] text-light dark:text-dark;
    }
 
    p,
@@ -42,17 +42,17 @@
 
 @layer components {
    .search-bar {
-      @apply flex items-center gap-4 p-[32px];
-      @apply w-full h-[70px];
+      @apply flex items-center gap-4 p-[32px] max-sm:gap-2 max-sm:px-[16px] max-sm:py-[7.5px];
+      @apply w-full h-[70px] max-sm:h-[60px];
       @apply bg-primary-light dark:bg-primary-dark text-light dark:text-dark rounded-[15px] mb-[1.5rem];
       @apply shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)] dark:shadow-none;
    }
 
    .card {
       /* Layout */
-      @apply grid grid-cols-4 grid-rows-4 h-[444px];
+      @apply grid grid-cols-[1.2fr,1fr,1fr,1fr,1fr] auto-rows-auto h-auto max-lg:grid-cols-5;
       /* Color */
-      @apply bg-primary-light dark:bg-primary-dark text-light dark:text-dark  shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)] rounded-[15px] p-[48px] dark:shadow-none gap-y-[1rem];
+      @apply bg-primary-light dark:bg-primary-dark text-light dark:text-dark  shadow-[0_16px_30px_-10px_rgba(70,96,187,0.20)] rounded-[15px] p-[48px] dark:shadow-none max-sm:p-[24px];
    }
 
    .info {
@@ -78,6 +78,6 @@
    }
 
    .clamped-width {
-      width: clamp(38.2rem, 100%, 48.65rem);
+      width: clamp(21.8rem, 100%, 48.65rem);
    }
 }

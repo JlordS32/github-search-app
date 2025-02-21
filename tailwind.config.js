@@ -43,7 +43,7 @@ export default {
             sm: ["13px", { lineHeight: "20px" }],
          },
          screens: {
-            sm: "375px",
+            sm: "500px",
             md: "768px",
             lg: "1024px",
          }
